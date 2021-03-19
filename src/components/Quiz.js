@@ -9,16 +9,10 @@ export default function Quiz() {
         setIsStarted(prev => !prev)
     })
 
-    const quiz = ()=>{
-        if(isStarted){
-            return <Question/>
-        }
-    }
-
     return (
         <div>
             <button className={isStarted ? 'hide' : 'show'} onClick={startQuiz}>Start</button>
-            {quiz()}
+            {isStarted && <Question/>}
         </div>
     )
 }
