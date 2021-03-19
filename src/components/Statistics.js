@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Statisctics(props) {
+export default function Statistics(props) {
     const {points, time, passed} = props
 
     const restart =()=>{

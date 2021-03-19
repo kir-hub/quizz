@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import Statisctics from './Statisctics'
+import React, { useEffect, useState, useCallback } from 'react'
+import Statistics from './Statistics'
 import dataQ from './data/dataQ.json'
 import dataA from './data/dataA.json'
 import './styles/styles.css'
@@ -18,7 +18,7 @@ export default function Question(props) {
         setTimeHandler(() => setInterval(() => setTime(prev => prev + 1), 1000) ) 
     },[])
 
-    const handler =(variant)=>{
+    const handler = useCallback((variant)=> ()=>{
         if(variant.isRight){
             setPoints(prev => prev + 1)
         }
@@ -30,7 +30,7 @@ export default function Question(props) {
          setQuestionIndex(prev => prev + 1)
         setAnswerIndex(prev => prev + 1)
         }
-    }
+    })
 
     const isPassed=()=>{
         if(points <= 2){
@@ -46,7 +46,7 @@ export default function Question(props) {
 
     const answersElems = dataA.map((answer, index)=> {
     return <li key={index} >{answer.map((variant, index) =>{
-        return <p key={index} onClick={() => handler(variant)}> {variant.body}</p>
+        return <p key={index} onClick={handler(variant)}> {variant.body}</p>
     }) }</li> 
 })
 
@@ -54,7 +54,7 @@ export default function Question(props) {
         <>
         {showStatistics ? 
         <>
-        <Statisctics passed={passed} points={points} time={time}/>
+        <Statistics passed={passed} points={points} time={time}/>
         </> :
         <div>
             <ul>

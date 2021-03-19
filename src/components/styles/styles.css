@@ -18,3 +18,7 @@ div{
     flex-direction: column;
     align-self: center;
 }
+
+li{
+    list-style-type: none;
+}
