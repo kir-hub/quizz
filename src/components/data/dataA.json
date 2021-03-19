@@ -1,0 +1,67 @@
+[
+    [{
+        "body": "microsoft",
+        "isRight": false
+    },
+    {
+        "body": "Brandon Ache",
+        "isRight": false
+    },
+    {
+        "body": "Den Abramov",
+        "isRight": false
+    },
+    {
+        "body": "Jordan Walke",
+        "isRight": true
+    }],
+    [{
+        "body": "Gweedo van Rossum",
+        "isRight": false
+    },
+    {
+        "body": "Microsoft",
+        "isRight": false
+    },
+    {
+        "body": "Facebook",
+        "isRight": false
+    },
+    {
+        "body": "Apple",
+        "isRight": true
+    }],
+    [{
+        "body": "cashback app",
+        "isRight": false
+    },
+    {
+        "body": "a credit card",
+        "isRight": false
+    },
+    {
+        "body": "an Ukrainian Bank",
+        "isRight": false
+    },
+    {
+        "body": "an App for internet banking",
+        "isRight": true
+    }],
+    [{
+        "body": "1963",
+        "isRight": false
+    },
+    {
+        "body": "1970",
+        "isRight": false
+    },
+    {
+        "body": "1983",
+        "isRight": false
+    },
+    {
+        "body": "1969",
+        "isRight": true
+    }]
+
+]
